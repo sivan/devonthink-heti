@@ -1,0 +1,65 @@
+{
+  "name": "devonthink-heti",
+  "version": "1.0.0",
+  "description": "赫蹏为DEVONthink的RSS阅读器制作的样式",
+  "main": "Heti.css",
+  "scripts": {
+    "start": "node-sass -w lib/main.scss demo/Heti.css --output-style=expanded --importer node_modules/node-sass-package-importer/dist/cli.js",
+    "build": "node-sass lib/main.scss Heti.css --output-style=expanded --importer node_modules/node-sass-package-importer/dist/cli.js",
+    "test": "npx stylelint --config package.json 'lib/**/*.scss'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sivan/devonthink-heti.git"
+  },
+  "keywords": [
+    "typography",
+    "css",
+    "DEVONthink",
+    "sass",
+    "scss"
+  ],
+  "author": "Sivan <sun.sivan@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sivan/devonthink-heti/issues"
+  },
+  "homepage": "https://github.com/sivan/devonthink-heti#readme",
+  "dependencies": {
+    "heti": "^0.4.3",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.1",
+    "node-sass-package-importer": "^5.3.2",
+    "sass-module-importer": "^1.4.0",
+    "stylelint": "^13.0.0",
+    "stylelint-config-recommended-scss": "^4.1.0",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-scss": "^3.13.0"
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-recommended-scss"
+    ],
+    "rules": {
+      "no-descending-specificity": [
+        true,
+        {
+          "ignore": [
+            "selectors-within-list"
+          ]
+        }
+      ],
+      "selector-type-no-unknown": [
+        true,
+        {
+          "ignore": [
+            "custom-elements"
+          ]
+        }
+      ]
+    }
+  }
+}

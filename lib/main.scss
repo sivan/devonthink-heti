@@ -1,0 +1,167 @@
+/*!
+ * Project: Heti.css for DEVONthink 3
+ * URL: https://github.com/sivan/devonthink-heti
+ * Author: Sivan [sun.sivan@gmail.com]
+ */
+
+@import "~normalize.css";
+@import "~heti/lib/font";
+@import "~heti/lib/variables";
+@import "~heti/lib/base";
+@import "~heti/lib/heading";
+@import "~heti/lib/list";
+@import "~heti/lib/table";
+@import "~heti/lib/inline";
+
+html {
+  background-color: #eee;
+}
+
+body {
+  box-sizing: border-box;
+  width: 75%;
+  min-width: 720px;
+  max-width: 880px;
+  margin-block-start: 48px;
+  margin-block-end: 72px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  padding-block-start: 48px;
+  padding-block-end: 48px;
+  padding-inline-start: 48px;
+  padding-inline-end: 48px;
+  border-radius: 2px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.32);
+  background-color: #fff;
+  background-size: 100% 24px;
+}
+
+body > * {
+  display: block;
+  max-width: 42rem;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+
+a {
+  color: #4285f4;
+  text-decoration: none;
+}
+
+$head-selector: '.feed_header';
+$link-selector: '.feed_link';
+$date-selector: '.feed_date';
+$article-selector: '.feed_article';
+$root-selector: $article-selector;
+
+#{$head-selector} {
+  margin-block-end: $std-block-unit * 1;
+  border-block-end: 1px solid #ddd;
+  font-family: $font-family-hei;
+
+  a {
+    position: relative;
+    display: block;
+    margin-block-end: $std-block-unit / 2;
+    font-size: $font-size-h1;
+    font-weight: $font-weight-bold;
+    line-height: 1.25;
+    letter-spacing: 0.05em;
+    color: inherit;
+  }
+
+  br {
+    display: none;
+  }
+}
+
+#{$date-selector} {
+  display: block;
+  margin-block-start: $std-block-unit / 2;
+  margin-block-end: $std-block-unit / 2;
+  font-size: $font-size-small;
+}
+
+#{$article-selector} {
+  font-family: $font-family-hei;
+
+  // 去除边距
+  figure {
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+  }
+
+  iframe {
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+// From heti/heti.scss
+// https://github.com/sivan/heti
+#{$root-selector} {
+  max-width: $line-length;
+  font-size: $font-size-normal;
+  font-weight: $font-weight-normal;
+  -webkit-font-smoothing: subpixel-antialiased;
+  line-height: $line-height-normal;
+
+  @include hetiBase();
+  @include hetiHeading();
+  @include hetiList();
+  @include hetiTable();
+  @include hetiInline();
+}
+
+// 夜间模式
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: hsl(0, 0%, 16%);
+  }
+
+  body,
+  table {
+    color: hsl(0, 0%, 64%);
+    background-color: hsl(0, 0%, 16%);
+  }
+
+  #{$head-selector} {
+    border-block-end-color: hsl(0, 0%, 24%);
+    color: hsl(0, 0%, 80%);
+  }
+
+  #{$date-selector} {
+    color: hsl(0, 0%, 36%);
+  }
+
+  #{$root-selector} {
+    a {
+      color: hsl(0, 0%, 100%);
+      text-shadow: 0 1px 1px hsl(0, 0%, 8%);
+
+      &:visited {
+        color: hsl(0, 0%, 72%);
+      }
+    }
+
+    figcaption {
+      color: hsl(0, 0%, 54%);
+    }
+
+    hr {
+      background-color: hsl(0, 0%, 20%);
+    }
+
+    blockquote,
+    pre {
+      background-color: hsl(0, 0%, 20%);
+    }
+  }
+}
