@@ -1,6 +1,6 @@
 # Heti for DEVONthink
 
-A style sheet based on `heti.css` for DEVONthink 3 RSS reader, support dark mode.
+A style sheet based on [heti](https://github.com/sivan/heti) for DEVONthink 3 RSS reader, support dark mode.
 
 ![Preview](https://raw.githubusercontent.com/sivan/devonthink-heti/master/demo/heti.jpg)
 
@@ -12,7 +12,8 @@ Put `Heti.css` to `~/Library/Application Support/DEVONthink 3/StyleSheets` direc
 
 ---
 
-基于赫蹏（`heti.css`）为DEVONthink的RSS阅读器制作的样式，支持黑暗模式。
+基于赫蹏为 DEVONthink 的 RSS 阅读器制作的样式，支持黑暗模式。
+
 预览地址：[https://sivan.github.io/devonthink-heti/](https://sivan.github.io/devonthink-heti/)。
 
 ## 使用方法
