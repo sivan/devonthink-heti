@@ -48,18 +48,55 @@ a {
   text-decoration: none;
 }
 
-$head-selector: '.feed_header';
-$link-selector: '.feed_link';
-$date-selector: '.feed_date';
-$article-selector: '.feed_article';
-$root-selector: $article-selector;
+$root-selector: 'body';
+$rss-selector: '.feed_article';
+$rss-prefix: '.feed';
 
-#{$head-selector} {
-  margin-block-end: $std-block-unit * 1;
-  border-block-end: 1px solid #ddd;
+#{$root-selector},
+#{$rss-selector} {
+  max-width: $line-length;
   font-family: $font-family-hei;
+  font-size: $font-size-normal;
+  font-weight: $font-weight-normal;
+  -webkit-font-smoothing: subpixel-antialiased;
+  line-height: $line-height-normal;
 
-  a {
+  // 去除边距
+  figure {
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+  }
+
+  iframe {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  @include hetiBase();
+  @include hetiHeading();
+  @include hetiList();
+  @include hetiTable();
+  @include hetiInline();
+}
+
+#{$rss-prefix} {
+  &_header {
+    margin-block-end: $std-block-unit * 1;
+    border-block-end: 1px solid #ddd;
+    font-family: $font-family-hei;
+
+    br {
+      display: none;
+    }
+  }
+
+  &_link {
     position: relative;
     display: block;
     margin-block-end: $std-block-unit / 2;
@@ -70,54 +107,12 @@ $root-selector: $article-selector;
     color: inherit;
   }
 
-  br {
-    display: none;
-  }
-}
-
-#{$date-selector} {
-  display: block;
-  margin-block-start: $std-block-unit / 2;
-  margin-block-end: $std-block-unit / 2;
-  font-size: $font-size-small;
-}
-
-#{$article-selector} {
-  font-family: $font-family-hei;
-
-  // 去除边距
-  figure {
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-  }
-
-  iframe {
-    position: relative;
-    box-sizing: border-box;
+  &_date {
     display: block;
-    width: 100%;
-    height: 100%;
+    margin-block-start: $std-block-unit / 2;
+    margin-block-end: $std-block-unit / 2;
+    font-size: $font-size-small;
   }
-
-  img {
-    max-width: 100%;
-  }
-}
-
-// From heti/heti.scss
-// https://github.com/sivan/heti
-#{$root-selector} {
-  max-width: $line-length;
-  font-size: $font-size-normal;
-  font-weight: $font-weight-normal;
-  -webkit-font-smoothing: subpixel-antialiased;
-  line-height: $line-height-normal;
-
-  @include hetiBase();
-  @include hetiHeading();
-  @include hetiList();
-  @include hetiTable();
-  @include hetiInline();
 }
 
 // 夜间模式
@@ -132,16 +127,8 @@ $root-selector: $article-selector;
     background-color: hsl(0, 0%, 16%);
   }
 
-  #{$head-selector} {
-    border-block-end-color: hsl(0, 0%, 24%);
-    color: hsl(0, 0%, 80%);
-  }
-
-  #{$date-selector} {
-    color: hsl(0, 0%, 36%);
-  }
-
-  #{$root-selector} {
+  #{$root-selector},
+  #{$rss-selector} {
     a {
       color: hsl(0, 0%, 100%);
       text-shadow: 0 1px 1px hsl(0, 0%, 8%);

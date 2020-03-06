@@ -1,6 +1,6 @@
 # Heti for DEVONthink
 
-A style sheet based on [heti](https://github.com/sivan/heti) for DEVONthink 3 RSS reader, support dark mode.
+A style sheet based on [heti](https://github.com/sivan/heti) for DEVONthink 3 Markdown preview and RSS reader, support dark mode.
 
 ![Preview](https://raw.githubusercontent.com/sivan/devonthink-heti/master/demo/heti.jpg)
 
@@ -8,17 +8,25 @@ Preview: [https://sivan.github.io/devonthink-heti/](https://sivan.github.io/devo
 
 ## Usage
 
-Put `Heti.css` to `~/Library/Application Support/DEVONthink 3/StyleSheets` directory, then set "Preference..." - "RSS" - "Feed Style Sheet" to "Heti.css".
+### For markdown preview
+Open "Preference..." - "Media" - "Style Sheet" then select `heti.css` file.
+
+### For RSS reader
+Put `heti.css` to `~/Library/Application Support/DEVONthink 3/StyleSheets` directory, then set "Preference..." - "RSS" - "Feed Style Sheet" to "heti.css".
 
 ---
 
-基于赫蹏为 DEVONthink 的 RSS 阅读器制作的样式，支持黑暗模式。
+基于赫蹏为 DEVONthink 的 Markdown 预览和 RSS 阅读器制作的样式，支持黑暗模式。
 
 预览地址：[https://sivan.github.io/devonthink-heti/](https://sivan.github.io/devonthink-heti/)。
 
 ## 使用方法
 
-放置 `Heti.css` 到 `~/Library/Application Support/DEVONthink 3/StyleSheets` 目录下，然后在「Preference...」-「RSS」的「Feed Style Sheet」中选择「Heti.css」即可。
+### Markdown 预览
+在「Preference...」-「Media」的「Style Sheet」中选择「heti.css」文件即可。
+
+### RSS 阅读器
+放置 `heti.css` 文件到 `~/Library/Application Support/DEVONthink 3/StyleSheets` 目录下，然后在「Preference...」-「RSS」的「Feed Style Sheet」中选择「heti.css」即可。
 
 ## 关于赫蹏
 

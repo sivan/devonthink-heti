@@ -441,84 +441,66 @@ a {
   text-decoration: none;
 }
 
-.feed_header {
-  margin-block-end: 24px;
-  border-block-end: 1px solid #ddd;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Heti Hei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-.feed_header a {
-  position: relative;
-  display: block;
-  margin-block-end: 12px;
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 1.25;
-  letter-spacing: 0.05em;
-  color: inherit;
-}
-
-.feed_header br {
-  display: none;
-}
-
-.feed_date {
-  display: block;
-  margin-block-start: 12px;
-  margin-block-end: 12px;
-  font-size: 14px;
-}
-
-.feed_article {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Heti Hei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-.feed_article figure {
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-}
-
-.feed_article iframe {
-  position: relative;
-  box-sizing: border-box;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.feed_article img {
-  max-width: 100%;
-}
-
+body,
 .feed_article {
   max-width: 42em;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Heti Hei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   font-weight: 400;
   -webkit-font-smoothing: subpixel-antialiased;
   line-height: 1.5;
 }
 
-.feed_article::before, .feed_article::after {
+body figure,
+.feed_article figure {
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+body iframe,
+.feed_article iframe {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+body img,
+.feed_article img {
+  max-width: 100%;
+}
+
+body::before, body::after,
+.feed_article::before,
+.feed_article::after {
   content: "";
   display: table;
 }
 
+body::after,
 .feed_article::after {
   clear: both;
 }
 
+body > *:first-child,
+body section > *:first-child,
+body td > *:first-child,
 .feed_article > *:first-child,
 .feed_article section > *:first-child,
 .feed_article td > *:first-child {
   margin-block-start: 0 !important;
 }
 
+body > *:last-child,
+body section > *:last-child,
+body td > *:last-child,
 .feed_article > *:last-child,
 .feed_article section > *:last-child,
 .feed_article td > *:last-child {
   margin-block-end: 0 !important;
 }
 
+body blockquote,
 .feed_article blockquote {
   margin-block-start: 12px;
   margin-block-end: 24px;
@@ -531,17 +513,20 @@ a {
   background-color: rgba(0, 0, 0, 0.054);
 }
 
+body figure,
 .feed_article figure {
   display: block;
   text-align: center;
 }
 
+body figure > img,
 .feed_article figure > img {
   display: block;
   margin-inline-start: auto;
   margin-inline-end: auto;
 }
 
+body hr,
 .feed_article hr {
   width: 30%;
   height: 1px;
@@ -553,16 +538,20 @@ a {
   background-color: #ddd;
 }
 
+body p,
 .feed_article p {
   margin-block-start: 12px;
   margin-block-end: 24px;
   text-align: justify;
 }
 
-.feed_article p:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .feed_article p:not(:lang(zh)) {
+body p:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), body p:not(:lang(zh)),
+.feed_article p:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+.feed_article p:not(:lang(zh)) {
   text-align: start;
 }
 
+body pre,
 .feed_article pre {
   margin-block-start: 12px;
   margin-block-end: 12px;
@@ -580,6 +569,7 @@ a {
   border-radius: 4px;
 }
 
+body pre code,
 .feed_article pre code {
   margin: 0;
   padding: 0;
@@ -589,6 +579,12 @@ a {
   color: inherit;
 }
 
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
 .feed_article h1,
 .feed_article h2,
 .feed_article h3,
@@ -602,44 +598,59 @@ a {
   font-weight: 600;
 }
 
+body h1,
 .feed_article h1 {
   margin-block-end: 24px;
   font-size: 32px;
   line-height: 48px;
 }
 
+body h2,
 .feed_article h2 {
   font-size: 24px;
   line-height: 36px;
 }
 
+body h3,
 .feed_article h3 {
   font-size: 20px;
   line-height: 36px;
 }
 
+body h4,
 .feed_article h4 {
   font-size: 18px;
   line-height: 24px;
 }
 
+body h5,
 .feed_article h5 {
   font-size: 16px;
   line-height: 24px;
 }
 
+body h6,
 .feed_article h6 {
   font-size: 14px;
   line-height: 24px;
 }
 
+body h1,
+body h2,
+body h3,
 .feed_article h1,
 .feed_article h2,
 .feed_article h3 {
   letter-spacing: 0.05em;
 }
 
-.feed_article h1:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .feed_article h1:not(:lang(zh)),
+body h1:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), body h1:not(:lang(zh)),
+body h2:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+body h2:not(:lang(zh)),
+body h3:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+body h3:not(:lang(zh)),
+.feed_article h1:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+.feed_article h1:not(:lang(zh)),
 .feed_article h2:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
 .feed_article h2:not(:lang(zh)),
 .feed_article h3:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
@@ -647,6 +658,11 @@ a {
   letter-spacing: 0;
 }
 
+body h1 + h2,
+body h2 + h3,
+body h3 + h4,
+body h4 + h5,
+body h5 + h6,
 .feed_article h1 + h2,
 .feed_article h2 + h3,
 .feed_article h3 + h4,
@@ -655,6 +671,9 @@ a {
   margin-block-start: 12px;
 }
 
+body ul,
+body ol,
+body dl,
 .feed_article ul,
 .feed_article ol,
 .feed_article dl {
@@ -662,11 +681,17 @@ a {
   margin-block-end: 24px;
 }
 
+body ul,
+body ol,
 .feed_article ul,
 .feed_article ol {
   padding-inline-start: 32px;
 }
 
+body ul ul,
+body ul ol,
+body ol ul,
+body ol ol,
 .feed_article ul ul,
 .feed_article ul ol,
 .feed_article ol ul,
@@ -675,19 +700,27 @@ a {
   margin-block-end: 0;
 }
 
+body ul,
 .feed_article ul {
   list-style-type: disc;
 }
 
+body ol,
 .feed_article ol {
   list-style-type: decimal;
 }
 
+body ul ul,
+body ol ul,
 .feed_article ul ul,
 .feed_article ol ul {
   list-style-type: circle;
 }
 
+body ul ul ul,
+body ul ol ul,
+body ol ul ul,
+body ol ol ul,
 .feed_article ul ul ul,
 .feed_article ul ol ul,
 .feed_article ol ul ul,
@@ -695,10 +728,12 @@ a {
   list-style-type: square;
 }
 
+body li,
 .feed_article li {
   list-style-type: unset;
 }
 
+body table,
 .feed_article table {
   box-sizing: border-box;
   table-layout: fixed;
@@ -711,6 +746,8 @@ a {
   word-break: break-word;
 }
 
+body th,
+body td,
 .feed_article th,
 .feed_article td {
   border: 1px solid #ccc;
@@ -720,6 +757,7 @@ a {
   padding-inline-end: 8px;
 }
 
+body caption,
 .feed_article caption {
   caption-side: bottom;
   margin-block-start: 2px;
@@ -728,16 +766,19 @@ a {
   line-height: 24px;
 }
 
+body a,
 .feed_article a {
   text-decoration: none;
 }
 
+body a:hover,
 .feed_article a:hover {
   padding-block-end: 1px;
   border-block-end: 1px solid currentColor;
   text-decoration: none;
 }
 
+body abbr[title],
 .feed_article abbr[title] {
   padding-block-end: 1px;
   border-block-end: 1px dotted;
@@ -745,11 +786,14 @@ a {
   cursor: help;
 }
 
+body b,
+body strong,
 .feed_article b,
 .feed_article strong {
   font-weight: 600;
 }
 
+body code,
 .feed_article code {
   margin-inline-start: 0.25em;
   margin-inline-end: 0.25em;
@@ -757,18 +801,23 @@ a {
   font-size: 0.875em;
 }
 
+body dfn,
 .feed_article dfn {
   font-weight: 600;
 }
 
-.feed_article dfn:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .feed_article dfn:not(:lang(zh)) {
+body dfn:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), body dfn:not(:lang(zh)),
+.feed_article dfn:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+.feed_article dfn:not(:lang(zh)) {
   font-weight: 400;
 }
 
+body em,
 .feed_article em {
   font-weight: 600;
 }
 
+body figcaption,
 .feed_article figcaption {
   display: inline-block;
   vertical-align: top;
@@ -776,10 +825,13 @@ a {
   text-align: start;
 }
 
+body i,
 .feed_article i {
   font-style: italic;
 }
 
+body ins,
+body u,
 .feed_article ins,
 .feed_article u {
   padding-block-end: 1px;
@@ -787,6 +839,7 @@ a {
   text-decoration: none;
 }
 
+body mark,
 .feed_article mark {
   padding-block-start: 2px;
   padding-block-end: 2px;
@@ -797,28 +850,36 @@ a {
   background-color: rgba(255, 247, 0, 0.88);
 }
 
+body q,
 .feed_article q {
   quotes: "「" "」" "『" "』";
 }
 
-.feed_article q:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .feed_article q:not(:lang(zh)) {
+body q:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), body q:not(:lang(zh)),
+.feed_article q:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+.feed_article q:not(:lang(zh)) {
   quotes: initial;
   quotes: auto;
 }
 
+body rt,
 .feed_article rt {
   font-size: 0.875em;
   font-weight: 400;
 }
 
+body small,
 .feed_article small {
   font-size: 0.875em;
 }
 
+body strong,
 .feed_article strong {
   font-weight: 600;
 }
 
+body sub,
+body sup,
 .feed_article sub,
 .feed_article sup {
   position: relative;
@@ -831,30 +892,37 @@ a {
   vertical-align: baseline;
 }
 
+body sub,
 .feed_article sub {
   bottom: -0.25em;
 }
 
+body sup,
 .feed_article sup {
   top: -0.5em;
 }
 
+body sup:target,
+body sup a:target,
 .feed_article sup:target,
 .feed_article sup a:target {
   background-color: #def;
 }
 
+body summary,
 .feed_article summary {
   padding-inline-start: 1em;
   outline: 0;
   cursor: pointer;
 }
 
+body summary::-webkit-details-marker,
 .feed_article summary::-webkit-details-marker {
   width: 0.6em;
   margin-inline-end: 0.4em;
 }
 
+body u[title],
 .feed_article u[title] {
   cursor: help;
   border-block-end-color: rgba(0, 0, 0, 0.54);
@@ -862,6 +930,11 @@ a {
   border-block-end-style: double;
 }
 
+body address,
+body cite,
+body dfn,
+body dt,
+body em,
 .feed_article address,
 .feed_article cite,
 .feed_article dfn,
@@ -870,7 +943,17 @@ a {
   font-style: normal;
 }
 
-.feed_article address:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), .feed_article address:not(:lang(zh)),
+body address:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)), body address:not(:lang(zh)),
+body cite:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+body cite:not(:lang(zh)),
+body dfn:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+body dfn:not(:lang(zh)),
+body dt:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+body dt:not(:lang(zh)),
+body em:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+body em:not(:lang(zh)),
+.feed_article address:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
+.feed_article address:not(:lang(zh)),
 .feed_article cite:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
 .feed_article cite:not(:lang(zh)),
 .feed_article dfn:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
@@ -882,6 +965,11 @@ a {
   font-style: italic;
 }
 
+body abbr[title],
+body del,
+body ins,
+body s,
+body u,
 .feed_article abbr[title],
 .feed_article del,
 .feed_article ins,
@@ -889,6 +977,34 @@ a {
 .feed_article u {
   margin-inline-start: 1px;
   margin-inline-end: 1px;
+}
+
+.feed_header {
+  margin-block-end: 24px;
+  border-block-end: 1px solid #ddd;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Heti Hei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.feed_header br {
+  display: none;
+}
+
+.feed_link {
+  position: relative;
+  display: block;
+  margin-block-end: 12px;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.05em;
+  color: inherit;
+}
+
+.feed_date {
+  display: block;
+  margin-block-start: 12px;
+  margin-block-end: 12px;
+  font-size: 14px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -900,26 +1016,25 @@ a {
     color: #a3a3a3;
     background-color: #292929;
   }
-  .feed_header {
-    border-block-end-color: #3d3d3d;
-    color: #cccccc;
-  }
-  .feed_date {
-    color: #5c5c5c;
-  }
+  body a,
   .feed_article a {
     color: white;
     text-shadow: 0 1px 1px #141414;
   }
+  body a:visited,
   .feed_article a:visited {
     color: #b8b8b8;
   }
+  body figcaption,
   .feed_article figcaption {
     color: #8a8a8a;
   }
+  body hr,
   .feed_article hr {
     background-color: #333333;
   }
+  body blockquote,
+  body pre,
   .feed_article blockquote,
   .feed_article pre {
     background-color: #333333;

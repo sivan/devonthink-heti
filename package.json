@@ -1,11 +1,11 @@
 {
   "name": "devonthink-heti",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "赫蹏为DEVONthink的RSS阅读器制作的样式",
   "main": "Heti.css",
   "scripts": {
-    "start": "node-sass -w lib/main.scss demo/Heti.css --output-style=expanded --importer node_modules/node-sass-package-importer/dist/cli.js",
-    "build": "node-sass lib/main.scss Heti.css --output-style=expanded --importer node_modules/node-sass-package-importer/dist/cli.js",
+    "start": "node-sass lib/ -o demo/  -w --output-style=expanded --importer node_modules/node-sass-package-importer/dist/cli.js",
+    "build": "node-sass lib/ -o ./ --output-style=expanded --importer node_modules/node-sass-package-importer/dist/cli.js",
     "test": "npx stylelint --config package.json 'lib/**/*.scss'"
   },
   "repository": {
