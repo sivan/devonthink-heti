@@ -105,6 +105,8 @@ $rss-prefix: '.feed';
     line-height: 1.25;
     letter-spacing: 0.05em;
     color: inherit;
+    border-block-end: 0 !important;
+    padding-block-end: 0 !important;
   }
 
   &_date {
