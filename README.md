@@ -2,7 +2,7 @@
 
 A style sheet based on [heti](https://github.com/sivan/heti) for DEVONthink 3 Markdown preview and RSS reader, support dark mode.
 
-![Preview](https://raw.githubusercontent.com/sivan/devonthink-heti/master/demo/heti.jpg)
+![Preview](https://raw.githubusercontent.com/sivan/devonthink-heti/master/demo/screenshot.png)
 
 Preview: [https://sivan.github.io/devonthink-heti/](https://sivan.github.io/devonthink-heti/)
 
