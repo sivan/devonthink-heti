@@ -465,6 +465,11 @@ body iframe,
   height: 100%;
 }
 
+body video,
+.feed_article video {
+  max-width: 100%;
+}
+
 body img,
 .feed_article img {
   max-width: 100%;
