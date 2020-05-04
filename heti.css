@@ -518,6 +518,13 @@ body blockquote,
   background-color: rgba(0, 0, 0, 0.054);
 }
 
+@media (prefers-color-scheme: dark) {
+  body blockquote,
+  .feed_article blockquote {
+    background-color: rgba(255, 255, 255, 0.054);
+  }
+}
+
 body figure,
 .feed_article figure {
   display: block;
@@ -540,7 +547,14 @@ body hr,
   margin-inline-start: auto;
   margin-inline-end: auto;
   border: 0;
-  background-color: #ddd;
+  background-color: #cccccc;
+}
+
+@media (prefers-color-scheme: dark) {
+  body hr,
+  .feed_article hr {
+    background-color: #404040;
+  }
 }
 
 body p,
@@ -570,8 +584,15 @@ body pre,
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   white-space: pre;
   word-wrap: normal;
-  background-color: rgba(0, 0, 0, 0.054);
   border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.054);
+}
+
+@media (prefers-color-scheme: dark) {
+  body pre,
+  .feed_article pre {
+    background-color: rgba(255, 255, 255, 0.054);
+  }
 }
 
 body pre code,
@@ -742,24 +763,44 @@ body table,
 .feed_article table {
   box-sizing: border-box;
   table-layout: fixed;
-  border-collapse: collapse;
-  border: 1px solid #ccc;
   margin-block-start: 12px;
   margin-block-end: 24px;
   margin-inline-start: auto;
   margin-inline-end: auto;
+  border-collapse: collapse;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
   word-break: break-word;
+}
+
+@media (prefers-color-scheme: dark) {
+  body table,
+  .feed_article table {
+    border-color: #404040;
+  }
 }
 
 body th,
 body td,
 .feed_article th,
 .feed_article td {
-  border: 1px solid #ccc;
   padding-block-start: 6px;
   padding-block-end: 6px;
   padding-inline-start: 8px;
   padding-inline-end: 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+}
+
+@media (prefers-color-scheme: dark) {
+  body th,
+  body td,
+  .feed_article th,
+  .feed_article td {
+    border-color: #404040;
+  }
 }
 
 body caption,
@@ -853,6 +894,14 @@ body mark,
   margin-inline-start: 1px;
   margin-inline-end: 1px;
   background-color: rgba(255, 247, 0, 0.88);
+  color: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  body mark,
+  .feed_article mark {
+    background-color: rgba(77, 74, 0, 0.88);
+  }
 }
 
 body q,
@@ -911,7 +960,16 @@ body sup:target,
 body sup a:target,
 .feed_article sup:target,
 .feed_article sup a:target {
-  background-color: #def;
+  background-color: #dbedff;
+}
+
+@media (prefers-color-scheme: dark) {
+  body sup:target,
+  body sup a:target,
+  .feed_article sup:target,
+  .feed_article sup a:target {
+    background-color: #3a6188;
+  }
 }
 
 body summary,
@@ -930,9 +988,16 @@ body summary::-webkit-details-marker,
 body u[title],
 .feed_article u[title] {
   cursor: help;
-  border-block-end-color: rgba(0, 0, 0, 0.54);
   border-block-end-width: 3px;
   border-block-end-style: double;
+  border-block-end-color: rgba(0, 0, 0, 0.54);
+}
+
+@media (prefers-color-scheme: dark) {
+  body u[title],
+  .feed_article u[title] {
+    border-block-end-color: rgba(255, 255, 255, 0.54);
+  }
 }
 
 body address,
@@ -1035,15 +1100,5 @@ body u,
   body figcaption,
   .feed_article figcaption {
     color: #8a8a8a;
-  }
-  body hr,
-  .feed_article hr {
-    background-color: #333333;
-  }
-  body blockquote,
-  body pre,
-  .feed_article blockquote,
-  .feed_article pre {
-    background-color: #333333;
   }
 }
