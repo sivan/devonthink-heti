@@ -406,6 +406,10 @@ template {
   src: local("Kaiti SC Black"), local("Kaiti TC Black");
 }
 
+span.critic.comment {
+  background-color: #eee;
+}
+
 html {
   background-color: #eee;
 }
