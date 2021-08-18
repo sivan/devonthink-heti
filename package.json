@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/sivan/devonthink-heti#readme",
   "dependencies": {
-    "heti": "^0.7.0",
+    "heti": "^0.8.2",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
