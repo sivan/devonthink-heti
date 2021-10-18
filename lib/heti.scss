@@ -12,6 +12,7 @@
 @import "~heti/lib/list";
 @import "~heti/lib/table";
 @import "~heti/lib/inline";
+@import "~heti/lib/helpers/add-on";
 @import "_criticmarkup";
 
 html {
@@ -35,6 +36,9 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.32);
   background-color: #fff;
   background-size: 100% 24px;
+
+  // 增加混排样式
+  @include hetiAddOns();
 }
 
 body > * {

@@ -9,7 +9,7 @@ Preview: [https://sivan.github.io/devonthink-heti/](https://sivan.github.io/devo
 ## Usage
 
 ### For markdown preview
-Open "Preference..." - "Media" - "Style Sheet" then select `heti.css` file.
+Open "Preference..." - "Files" - "Markdown" - "Style Sheet" then select `heti.css` file.
 
 ### For RSS reader
 Put `heti.css` to `~/Library/Application Support/DEVONthink 3/StyleSheets` directory, then set "Preference..." - "RSS" - "Feed Style Sheet" to "heti.css".
@@ -23,7 +23,9 @@ Put `heti.css` to `~/Library/Application Support/DEVONthink 3/StyleSheets` direc
 ## 使用方法
 
 ### Markdown 预览
-在「Preference...」-「Media」的「Style Sheet」中选择「heti.css」文件即可。
+在「Preference...」-「Files」- 「Markdown」的「Style Sheet」中选择「heti.css」文件即可。
+
+\* 在同一界面的「JavaScript」中选择「heti.js」可以开启中西文混排美化和标点挤压效果（参考[演示站点](https://sivan.github.io/devonthink-heti/#混排效果与标点挤压)）。
 
 ### RSS 阅读器
 放置 `heti.css` 文件到 `~/Library/Application Support/DEVONthink 3/StyleSheets` 目录下，然后在「Preference...」-「RSS」的「Feed Style Sheet」中选择「heti.css」即可。

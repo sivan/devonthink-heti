@@ -1,6 +1,6 @@
 {
   "name": "devonthink-heti",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "赫蹏为DEVONthink的RSS阅读器制作的样式",
   "main": "Heti.css",
   "scripts": {
