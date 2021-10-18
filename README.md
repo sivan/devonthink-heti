@@ -25,7 +25,7 @@ Put `heti.css` to `~/Library/Application Support/DEVONthink 3/StyleSheets` direc
 ### Markdown 预览
 在「Preference...」-「Files」- 「Markdown」的「Style Sheet」中选择「heti.css」文件即可。
 
-\* 在同一界面的「JavaScript」中选择「heti.js」可以开启中西文混排美化和标点挤压效果（参考[演示站点](https://sivan.github.io/devonthink-heti/#混排效果与标点挤压)）。
+\* 在同一界面的「JavaScript」中选择「heti.js」可以开启中西文混排美化和标点挤压效果（重启生效，[效果预览](https://sivan.github.io/devonthink-heti/#混排效果与标点挤压)）。
 
 ### RSS 阅读器
 放置 `heti.css` 文件到 `~/Library/Application Support/DEVONthink 3/StyleSheets` 目录下，然后在「Preference...」-「RSS」的「Feed Style Sheet」中选择「heti.css」即可。
