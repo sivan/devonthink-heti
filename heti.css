@@ -458,6 +458,35 @@ body {
   background-size: 100% 24px;
 }
 
+body heti-spacing {
+  display: inline;
+}
+
+body heti-spacing + sup,
+body heti-spacing + sub {
+  margin-inline-start: 0;
+}
+
+body .heti-spacing-start {
+  margin-inline-end: 0.25em;
+}
+
+body .heti-spacing-end {
+  margin-inline-start: 0.25em;
+}
+
+body heti-adjacent {
+  display: inline;
+}
+
+body .heti-adjacent-half {
+  margin-inline-end: -0.5em;
+}
+
+body .heti-adjacent-quarter {
+  margin-inline-end: -0.25em;
+}
+
 body > * {
   display: block;
   max-width: 42rem;
